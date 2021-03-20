@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>variables scope</title>
+</head>
+<body>
+          <button onclick="sum()">sum</button>
+          <script type="text/javascript">
+          	a=30;
+          	function sum(){
+                    a=50;
+                    b=10;
+          	       result =a+b;
+          	       console.log(result+"  local variables");}
+                   console.log(a+"  global variables");
+          </script>
+          
+</body>
+</html>

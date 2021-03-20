@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Arithmetic</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Arithmatic funtions</legend>
+<input type="number" id="first" /><br>
+<input type="number" id="second" /><br>
+       <button onclick="sum()">Sum</button>
+       <button onclick="sub()">Subtract</button>
+       <button onclick="mul()">Multiply</button>
+       <button onclick="div()">Divide</button>
+       <button onclick="remainder()">remainder</button>
+       <button onclick="increment()">increment</button>
+       <button onclick="decrement()">decrement</button>
+<p id="output">Output is:</p>
+<script>
+function sum()
+{
+var first=parseInt(document.getElementById("first").value);
+var second=parseInt(document.getElementById("second").value);
+var third=first+second; 
+document.getElementById("output").innerHTML=third;                //for output on screen
+console.log(third);                                               //for output in console
+}
+function sub()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first-second; 
+document.getElementById("output").innerHTML=third;
+console.log(third);
+}
+function mul()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first*second; 
+document.getElementById("output").innerHTML=third;
+console.log(third);
+}
+function div()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first/second; 
+document.getElementById("output").innerHTML=third;
+console.log(third);
+}
+function remainder()
+{
+	var first= parseInt(document.getElementById("first").value);
+	var second= parseInt(document.getElementById("second").value);
+	var third= first%second;
+	document.getElementById("output").innerHTML=third;
+	console.log(third);
+}
+function increment()
+{
+	var first = parseInt(document.getElementById("first").value);
+	//var second= parseInt(document.getElementById("second").value);
+	var forth = ++first;
+	document.getElementById("output").innerHTML=forth;            //this give one increment in forth named variable
+	console.log(forth);                                     
+}
+function decrement()
+{
+	var first = parseInt(document.getElementById("first").value);
+	
+	 --first;
+	var third=first;
+	document.getElementById("output").innerHTML=third;            //this give  one decrement in third variable
+	console.log(third);
+	} 
+</script>
+
+</fieldset><br><br>
+</body>
+</html>

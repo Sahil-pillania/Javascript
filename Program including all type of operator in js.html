@@ -1,0 +1,324 @@
+<html>
+<head>
+<title>Calculator with all operators</title>
+</head>
+<body><center>
+  <p><h1>All type of operators in js</h1></p></center>
+	<fieldset>
+		<legend>Arithmetic operators</legend>
+<input type="number" id="first" /><br>
+<input type="number" id="second" /><br>
+       <button onclick="sum()">Sum</button>
+       <button onclick="sub()">Subtract</button>
+       <button onclick="mul()">Multiply</button>
+       <button onclick="div()">Divide</button>
+       <button onclick="remainder()">remainder</button>
+       <button onclick="increment()">increment</button>
+       <button onclick="decrement()">decrement</button>
+<p id="output"></p>
+<script>
+function sum()
+{
+var first=parseInt(document.getElementById("first").value);
+var second=parseInt(document.getElementById("second").value);
+var third=first+second; 
+document.getElementById("output").innerHTML=third;                //for output on screen
+console.log(third);                                               //for output in console
+}
+function sub()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first-second; 
+document.getElementById("output").innerHTML=third;
+console.log(third);
+}
+function mul()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first*second; 
+document.getElementById("output").innerHTML=third;
+console.log(third);
+}
+function div()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first/second; 
+document.getElementById("output").innerHTML=third;
+console.log(third);
+}
+function remainder()
+{
+	var first= parseInt(document.getElementById("first").value);
+	var second= parseInt(document.getElementById("second").value);
+	var third= first%second;
+	document.getElementById("output").innerHTML=third;
+	console.log(third);
+}
+function increment()
+{
+	var first = parseInt(document.getElementById("first").value);
+	//var second= parseInt(document.getElementById("second").value);
+	var forth = ++first;
+	document.getElementById("output").innerHTML=forth;            //this give one increment in forth named variable
+	console.log(forth);                                     
+}
+function decrement()
+{
+	var first = parseInt(document.getElementById("first").value);
+	
+	 --first;
+	var third=first;
+	document.getElementById("output").innerHTML=third;            //this give  one decrement in third variable
+	console.log(third);
+	} 
+  
+</script>
+</fieldset><br><br><br><br><br>
+
+
+
+<fieldset>	
+<legend>Comparison operators</legend>	
+
+<input type="number" id="first" /><br>
+<input type="number" id="second" /><br>
+       <button onclick="Equal()">Equal</button>
+       <button onclick="Notequal()">Notequal</button>
+       <button onclick="Greaterthan()">Greaterthan</button>
+       <button onclick="Lessthan()">Lessthan</button>
+       <button onclick="less_than_equal_to()">less_than_equal_to</button>
+       <button onclick="Greater_than_equal_to()">Greater_than_equal_to</button>
+<p id="result"></p>
+
+<script>
+function Equal()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first==second;
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+
+function Notequal()   // this function give true when values are not equal and vice-versa.
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first!=second;
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+function Greaterthan()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first>second); 
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+function Lessthan()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first < second); 
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+function Greater_than_equal_to() 
+{
+	var first= parseInt(document.getElementById("first").value);
+	var second= parseInt(document.getElementById("second").value);
+	document.getElementById("result").innerHTML=first>=second;
+	console.log(first>=second);
+}
+function less_than_equal_to()
+{
+	var first = parseInt(document.getElementById("first").value);
+var second = parseInt(document.getElementById("second").value);
+document.getElementById("result").innerHTML=first<=second;
+console.log(first<=second);
+}
+</script></fieldset><br><br><br><br>
+
+
+
+
+
+<fieldset>
+       <legend> Bitwise operators</legend>
+       <input type="number" id="first" /><br>
+       <input type="number" id="second" /><br>
+       <button onclick="Bitwise_AND()">Bitwise_AND</button>
+       <button onclick="Bitwise_OR()">Bitwise_OR</button>
+       <button onclick="Bitwise_not()">Bitwise_not</button>
+      
+<p id="resultt"></p>
+<script>
+function Bitwise_AND()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first&second;
+document.getElementById("resultt").innerHTML=third;
+console.log(third);
+}
+function Bitwise_OR()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first|second;
+document.getElementById("resultt").innerHTML=third;
+console.log(third);
+}
+function Bitwise_not()
+{
+var first = parseInt(document.getElementById("first").value); // it takes only one input so we chose first.
+var third= ~first; 
+document.getElementById("resultt").innerHTML=third;
+console.log(third);
+}
+</script>
+</fieldset>
+
+
+
+
+<fieldset>
+       <legend> Logical operators</legend>
+       <p>condition:- (first>0 &&/||/! second>0)</p>
+       <input type="number" id="first" /><br>
+       <input type="number" id="second" /><br>
+       <button onclick="logical_AND()">logical_AND</button>
+       <button onclick="logical_OR()">logical_OR</button>
+       <button onclick="logical_not()">logical_not</button>
+      
+<p id="result2"></p>
+<script>
+function logical_AND()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first>0 && second>0);
+document.getElementById("result2").innerHTML=third;
+console.log(third);
+}
+function logical_OR()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first>0 || second>0);
+document.getElementById("result2").innerHTML=third;
+console.log(third);
+}
+function logical_not()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value); 
+var third= !(first>0 || second>0); 
+document.getElementById("result2").innerHTML=third;
+console.log(third);
+</script>
+</fieldset>
+
+
+	<fieldset>
+<legend> Assignment operators</legend>
+
+<input type="number" id="x" /><br>
+<input type="number" id="y" /><br>
+       <button onclick="Assignment_addition()">Assignment_addition</button>
+       <button onclick="Assignment_subtraction()">Assignment_subtraction</button>
+       <button onclick="Assignment_multiply()">Assignment_multiply</button>
+       <button onclick="Assignment_divide()">Assignment_divide</button>
+       <button onclick="Assignment_remainder()">Assignment_remainder</button>
+       <button onclick="Assignment_Exponentiation()">Assignment_Exponentiation</button>
+<p id="result3"></p>
+<script>
+function Assignment_addition()
+{
+var x = parseInt(document.getElementById("x").value);
+var y =parseInt(document.getElementById("y").value);
+document.getElementById("result3").innerHTML=x+=y;
+console.log(x+=y);
+}
+function Assignment_subtraction()
+{
+var x = parseInt(document.getElementById("x").value);
+var y =parseInt(document.getElementById("y").value);
+document.getElementById("result3").innerHTML=x-=y;
+console.log(x-=y);
+}
+function Assignment_multiply()
+{
+var x = parseInt(document.getElementById("x").value); 
+var y =parseInt(document.getElementById("y").value);
+document.getElementById("result3").innerHTML=x*=y;
+console.log(x*=y);
+}
+function Assignment_divide()
+{
+var x = parseInt(document.getElementById("x").value); 
+var y =parseInt(document.getElementById("y").value);
+document.getElementById("result3").innerHTML=x/=y;
+console.log(x/=y);
+}
+function Assignment_remainder()
+{
+var x = parseInt(document.getElementById("x").value); 
+var y =parseInt(document.getElementById("y").value); 
+document.getElementById("result3").innerHTML=x%=y;
+console.log(x%=y);
+}
+function Assignment_Exponentiation()
+{
+var x = parseInt(document.getElementById("x").value); 
+var y =parseInt(document.getElementById("y").value); 
+document.getElementById("result3").innerHTML=x**=y;
+console.log(x**=y);
+}
+</script>
+</fieldset>
+
+
+<fieldset>
+	<legend>Conditional operator</legend>
+	<p> Check whether you are mature or not.Please enter your age---</p>
+                <input type="number" id="age" />
+                <button onclick="condition()">check condition</button>
+                <p id="condition"></p>
+ <script>
+ 	function condition()
+ 	{
+ 		var age = parseInt(document.getElementById('age').value);
+ 		var output = (age>=20 ? "Mature" : "minor");
+ 		document.getElementById('condition').innerHTML=output;
+ 		console.log(output);
+ 	}
+</script>
+</fieldset><br>
+
+
+<fieldset>
+        	<legend>String operator</legend>
+        	<input type="text" id="one" />
+        	<input type="text" id="two" />
+        	<button onclick="string1()">String</button>
+         <p id="st"></p>
+        	<script type="text/javascript">
+        		function string1()
+        		{
+        			var one=document.getElementById('one').value ; 
+        			var two=document.getElementById('two').value ;
+        			var three = one + two;
+        			document.getElementById('st').innerHTML=three;
+        			console.log(three);
+        	
+        		}
+        	</script>
+        </fieldset>
+
+</body>
+</html>

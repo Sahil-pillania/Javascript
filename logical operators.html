@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>Condition for AND & OR operator is:first number>0, second number>0 and for not is:!(first>0 || second>0)</p>
+<fieldset>
+<legend> Logical operators</legend>
+<input type="number" id="first" /><br>
+<input type="number" id="second" /><br>
+       <button onclick="logical_AND()">logical_AND</button>
+       <button onclick="logical_OR()">logical_OR</button>
+       <button onclick="logical_not()">logical_not</button>
+      
+<p id="result2"></p>
+<script>
+function logical_AND()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first>0 && second>0);
+document.getElementById("result2").innerHTML=third;
+console.log(third);
+}
+function logical_OR()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first>0 || second>0);
+document.getElementById("result2").innerHTML=third;
+console.log(third);
+}
+function logical_not()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value); 
+var third= !(first>0 || second>0); 
+document.getElementById("result2").innerHTML=third;
+console.log(third);
+}
+</script>
+</fieldset>
+</body>
+</html>

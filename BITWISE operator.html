@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Bitwise operator takes only 0 and 1 in input.</p>
+<p>NOTE:Not operator takes only one input so we chose first.</p><br>
+
+<fieldset>
+<legend> Bitwise operators</legend>
+<input type="number" id="first" /><br>
+<input type="number" id="second" /><br>
+       <button onclick="Bitwise_AND()">Bitwise_AND</button>
+       <button onclick="Bitwise_OR()">Bitwise_OR</button>
+       <button onclick="Bitwise_not()">Bitwise_not</button>
+       <button onclick="Bitwise_XOR()">Bitwise_XOR</button>
+      
+<p id="resultt"></p>
+<script>
+function Bitwise_AND()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first&second;
+document.getElementById("resultt").innerHTML=third;
+console.log(third);
+}
+function Bitwise_OR()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first|second;
+document.getElementById("resultt").innerHTML=third;
+console.log(third);
+}
+function Bitwise_not()
+{
+var first = parseInt(document.getElementById("first").value); // it takes only one input so we chose first.
+var third= ~first; 
+document.getElementById("resultt").innerHTML=third;
+console.log(third);
+}
+function Bitwise_XOR()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first^second;
+document.getElementById("resultt").innerHTML=third;
+console.log(third);
+}
+</script>
+</fieldset>
+</body>
+</html>

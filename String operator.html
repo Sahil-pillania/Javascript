@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+        <fieldset>
+        	<legend>String operator</legend>
+        	<input type="text" id="one" />
+        	<input type="text" id="two" />
+        	<button onclick="string1()">String</button>
+         <p id="st"></p>
+        	<script type="text/javascript">
+        		function string1()
+        		{
+        			var one=document.getElementById('one').value ; 
+        			var two=document.getElementById('two').value ;
+        			var three = one + two;
+        			document.getElementById('st').innerHTML=three;
+        			console.log(three);
+        	
+        		}
+        	</script>
+        </fieldset>
+
+
+</body>
+</html>

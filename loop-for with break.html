@@ -1,0 +1,22 @@
+<html>
+    <head><title>for loop</title></head>
+    <body>
+    
+        <input type="number" id="num1" />
+        <button onclick="printTable()">printTable</button>
+        <script>
+        function printTable()
+        {
+            var num1= parseInt(document.getElementById("num1").value);
+           
+          
+           for ( i=1; i <= 20; i++)
+             {
+                 var result = i*num1;
+                 console.log(result);
+                 if(i==10)
+                  {break;}
+      }       }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<fieldset>
+	<legend>Conditional operator</legend>
+	//<p> Check whether you are mature or not.---</p>
+                <input type="number" id="age" />
+                <button onclick="condition()">check condition</button>
+                <p id="condition"></p>
+ <script>
+ 	function condition()
+ 	{
+ 		var age = parseInt(document.getElementById('age').value);
+ 		var output = (age>=20 ? "Mature" : "minor");
+ 		document.getElementById('condition').innerHTML=output;
+ 		console.log(output);
+ 	}
+</script>
+</fieldset><br><br>
+</body>
+</html>

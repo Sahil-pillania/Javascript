@@ -1,0 +1,64 @@
+<html>
+<body>
+<fieldset>	
+<legend>Comparison operators</legend>	
+
+<input type="number" id="first" /><br>
+<input type="number" id="second" /><br>
+       <button onclick="Equal()">Equal</button>
+       <button onclick="Notequal()">Notequal</button>
+       <button onclick="Greaterthan()">Greaterthan</button>
+       <button onclick="Lessthan()">Lessthan</button>
+       <button onclick="less_than_equal_to()">less_than_equal_to</button>
+       <button onclick="Greater_than_equal_to()">Greater_than_equal_to</button>
+<p id="result"></p>
+
+<script>
+function Equal()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first==second;
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+
+function Notequal()   // this function give true when values are not equal and vice-versa.
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= first!=second;
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+function Greaterthan()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first>second); 
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+function Lessthan()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first<second); 
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+function Greater_than_equal_to() 
+{
+	var first= parseInt(document.getElementById("first").value);
+	var second= parseInt(document.getElementById("second").value);
+	document.getElementById("result").innerHTML=first>=second;
+	console.log(first>=second);
+}
+function less_than_equal_to()
+{
+       var first = parseInt(document.getElementById("first").value);
+var second = parseInt(document.getElementById("second").value);
+document.getElementById("result").innerHTML=first<=second;
+console.log(first<=second);
+}
+</script></fieldset></body></html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> logical </title>
+</head>
+<body>
+<fieldset>
+<legend>Logical funtions</legend>
+<input type="number" id="first" /><br>
+<input type="number" id="second" /><br>
+       <button onclick="logical_AND()">logical_AND</button>
+       
+      
+<p id="result"></p>
+<script>
+function logical_AND()
+{
+var first = parseInt(document.getElementById("first").value);
+var second =parseInt(document.getElementById("second").value);
+var third= (first&second);
+document.getElementById("result").innerHTML=third;
+console.log(third);
+}
+</script>
+</fieldset>
+</body>
+</html>
