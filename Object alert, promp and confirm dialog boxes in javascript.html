@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alert, confirm and prompt dialog boxes</title>
+</head>
+<body>
+              <button onclick="alert('this the example of alert box')">alert</button><br>
+              <button onclick="confirm('this is confirm dialog box')">confirm</button><br>
+              <button onclick="prompt()">prompt</button>
+              <script type="text/javascript">
+              	function prompt()
+              	{
+              		var txt;
+              		var person = prompt("please enter your name:", "Harry potter");
+              		if (person == null || person == "");
+              		{ 
+              		   txt = "user cancelled the prompt.";
+              		   else
+              		      txt = "Hello" + person + " how are you today?";
+              		}
+              		document.getElementById('demo').innerHTML = txt;
+              	}
+              </script>
+</body>
+</html>
