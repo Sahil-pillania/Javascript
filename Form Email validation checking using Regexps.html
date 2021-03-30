@@ -1,0 +1,42 @@
+<html>
+    <head><title>Form input validation check</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquary/3.5.1/jquary.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function checkingMail(email) {
+        var validate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (email.value.match(validate)) {
+        alert("Mail ID format is approved!");
+        document.mailForm.mailText.focus();
+        return true;
+        } else {
+        alert("Mail ID format is invalid!");
+        document.mailForm.mailText.focus();
+        return false;
+        }
+        }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Form validation </h2>
+            <form name="mailForm" action="contact" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter email" name='mailText'>
+                </div>
+                <div class="form-group">
+                    <label for="password" >Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                </div><br>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="remember"> Remember me</label>
+                </div>
+                
+                <input type="submit" name="submit" onclick="checkingMail(document.mailForm.mailText)" />
+            </form>
+        </div>
+        
+    </body>
+</html>
