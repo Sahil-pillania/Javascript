@@ -1,0 +1,26 @@
+<html>
+    <head><title>Form input validation check</title>
+    
+    </head>
+    <body>
+        
+            <h2>Form validation </h2>
+            <form action="" method="post" onsubmit="checkvalue()">
+                email:<input type="text" id="email" name="email"><br>
+                password:<input type="password" id="password" name="password"><br>
+                <button type="submit" onclick="checkvalue()">Submit</button>
+            </form>
+       
+        <script>
+            function checkvalue()
+            {
+            var email=document.getElementById('email').value;
+            var password=document.getElementById('password').value;
+            if(email=="" || password=="")
+             {
+                 alert("Enter a valid email");
+             }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head><title>Form input validation check and other tags</title>
+    
+    </head>
+    <body>
+        
+            <h2>Form validation </h2>
+            <form  onsubmit="checkvalue()">
+                email:<input type="text" id="email" name="email"><br>                  
+                password:<input type="password" id="password" name="password"><br>
+                <button type="submit" onclick="checkvalue()">Submit</button><br>
+            </form>
+            <form>
+                <textarea name="textarea" cols="30" rows="10" placeholder="enter your text here"></textarea><br> 
+                
+               <label> States</label>  <select name="state">   
+               <option value="Gujarat">Gujarat
+               <option value="Punjab">Punjab
+               <option value="Haryana">Haryana
+               <option value="Rajasthan">Rajasthan
+               </select><br><br>
+               
+               <fieldset>
+                   <legend>Gender</legend>
+               <input type="radio" name="radio" id="opt" value="Mr"checked>Mr.<br>    
+               <input type="radio" name="radio" id="opt" value="Mrs">Mrs.<br>
+             </fieldset> 
+
+               <label>Language known</label>
+               <ul> 
+               <li><input type="Checkbox" name="option1" value="Gujarati"checked>Gujarati<Br><Br>   
+
+               <li><input type="Checkbox" name="option2" value="Hindi"checked>Hindi<Br><Br>
+
+               <li><input type="Checkbox" name="option3" value="English"checked>English<Br><Br>
+
+               <li><input type="Checkbox" name="option4" value="Marathi">Marathi<Br><Br>
+               </ul>
+            
+              <button type="submit" onclick="submit">Save all</button>
+              <button type="reset" onclick="reset">Reset all</button><br>
+            </form>
+        <script>
+            function checkvalue()
+            {
+            var email=document.getElementById('email').value;
+            var password=document.getElementById('password').value;
+            if(email=="" || password=="")
+             {
+                 alert("Enter a valid email");
+             }
+            }
+        </script>
+    </body>
+</html>

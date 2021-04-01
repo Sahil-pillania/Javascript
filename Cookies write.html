@@ -1,0 +1,24 @@
+<html>
+   <head>   
+      <script type = "text/javascript">
+        
+            function WriteCookie() {
+               if( document.formone.field.value == "" ) {
+                  alert("Enter some value!");
+                  return;
+               }
+               cookievalue = escape(document.formone.field.value) + ";";
+               document.cookie = "name=" + cookievalue;
+               document.write ("Setting Cookies : " + "name=" + cookievalue );
+            }
+       
+      </script>      
+   </head>
+   
+   <body>      
+      <form name = "formone" action = "">
+         Enter name: <input type = "text" name = "field"/>
+         <input type = "button" value = "Set Cookie" onclick = "WriteCookie();"/>
+      </form>   
+   </body>
+</html>
