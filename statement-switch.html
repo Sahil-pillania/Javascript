@@ -1,32 +1,44 @@
 <html>
-    <head><title>if statement</title></head>
+    <head><title>switch statement</title></head>
     <body>
-    
-        <input type="number" id="day">
+        <p>Enter your day no to get the name of the day.
+        <input type="number" id="day" />
         
-        <button onclick="result(day)">Day is:</button>
+        <button onclick="result()">Day is:</button>
+        <p id="demo"></p>
         <script>
-       
-            switch (day)
-                 { case '0': console.log(sunday);
+        function result()
+        {   
+            var out=document.getElementById("day").value;
+            switch(out)
+                 {  case'0': console.log("sunday");
+                              document.getElementById('demo').innerHTML="Sunday";
                             break;
-                   case '1': console.log(monday);
+                    case'1': console.log("monday");
+                             document.getElementById('demo').innerHTML="Monday";
                             break;
-                   case '2': console.log(tuesday);
+                    case'2': console.log("tuesday");
+                             document.getElementById('demo').innerHTML="Tuesday";
                             break;
-                   case '3': console.log(wednesday);
+                    case'3': console.log("wednesday");
+                             document.getElementById('demo').innerHTML="Wednesday";
                             break;
 
-                   case '4': console.log(thursday);
+                    case'4': console.log("thursday");
+                             document.getElementById('demo').innerHTML="Thursday";
                             break;
-                   case '5': console.log(friday);
+                    case'5': console.log("friday");
+                             document.getElementById('demo').innerHTML="Friday";
                             break;
-                    case '6': console.log(saturday);
+                    case'6': console.log("saturday");
+                             document.getElementById('demo').innerHTML="Saturday";
                             break;
+
+                     default: console.log("invalid selection");
 
                  }
             
-
+        }
       
     </script>
     </body>
